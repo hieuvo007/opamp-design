@@ -1,0 +1,11 @@
+* NMOS IV Characteristics
+.model nmos nmos level=1 vto=0.5 kp=100u
+M1 D G 0 0 nmos w=5u l=0.18u
+VGS G 0 0
+VDS D 0 3
+.control
+  save all
+  dc VDS 0 3 0.1 VGS 0 3 0.5
+  plot -i(VDS)
+.endc
+.end
